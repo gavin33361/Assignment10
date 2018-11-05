@@ -1,0 +1,157 @@
+body {
+	background: black;
+  background: url(images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+
+.slideshow-container {
+	  width: 1000px;
+    height: 650px;
+    max-width: 100%;
+    max-height: 100%;
+  	position: relative;
+  	margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+#one {
+  position: relative;
+	width: 480px;
+  height: 270px;
+  animation: animationleft 3s, fade 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+#two {
+  position: relative;
+  width: 480px;
+  height: 270px;
+  animation: animationright 3s, fade 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+#three {
+  width: 320px;
+  height: 270px;
+  animation: fade1 3s;
+  animation-iteration-count: 1;
+}
+
+#four {
+  width: 320px;
+  height: 270px;
+  animation: fade1 5s;
+  animation-iteration-count: 1;
+}
+
+#five {
+  width: 320px;
+  height: 270px;
+  animation: fade1 7s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animationleft {
+  0% {left: 0px;}
+  100% {left: 483px;}
+}
+
+@keyframes animationright {
+  0% {right:0px;}
+  100% {right: 483px;}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.dots {
+	text-align: center;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(128,128,128,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 24px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  /*transition: background-color 0.6s ease;*/
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.dot:active {
+  animation: shadow 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shadow
+{
+     0% {box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);}
+     100% {box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);}
+}
+
+@keyframes fade {
+  from {opacity: 0.5} 
+  to {opacity: 1}
+}
+
+@keyframes fade1 {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
